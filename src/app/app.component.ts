@@ -28,4 +28,11 @@ export class AppComponent {
     this.selectedEmployee = new Employee();
   }
 
+  delete() {
+    if(confirm('Estás seguro de eliminar esta entrada')){
+      this.employeeArray = this.employeeArray.filter(x => x != this.selectedEmployee);
+      this.selectedEmployee = new Employee();
+    }
+  }
+
 }
